@@ -73,8 +73,21 @@ update:
 <li>pnpm v7.18.2</li>
 </ul>
 <a id="md:bugs" class="tsd-anchor"></a><h2><a href="#md:bugs">BUGS</a></h2><ul>
-<li>issue: <a href="https://github.com/wqs576222103/tree-handle-lib/issues">https://github.com/wqs576222103/tree-handle-lib/issues</a></li>
+<li><p>issue: <a href="https://github.com/wqs576222103/tree-handle-lib/issues">https://github.com/wqs576222103/tree-handle-lib/issues</a></p>
+</li>
+<li><a id="md:faq" class="tsd-anchor"></a><h2><a href="#md:faq">FAQ</a></h2></li>
 </ul>
+<p>if you want to replace all keyName from &#39;key&#39; to &#39;id&#39;, you add tree-handle-lib-loader to your project. Follow these steps.</p>
+<ol>
+<li>install tree-handle-lib-loader</li>
+</ol>
+<pre><code class="language-bash"><span class="hl-0"> npm </span><span class="hl-1">install</span><span class="hl-0"> </span><span class="hl-1">tree-handle-lib-loader</span>
+</code><button>Copy</button></pre>
+<ol start="2">
+<li>add loader config</li>
+</ol>
+<pre><code class="language-javascript"><span class="hl-4">// webpack example</span><br/><span class="hl-0">{</span><br/><span class="hl-0">  </span><span class="hl-8">rules</span><span class="hl-0">: [{</span><br/><span class="hl-0">      </span><span class="hl-3">test:</span><span class="hl-9"> /</span><span class="hl-10">\.</span><span class="hl-9">js</span><span class="hl-11">$</span><span class="hl-9">/</span><span class="hl-0">,</span><br/><span class="hl-0">      </span><span class="hl-3">include:</span><span class="hl-0"> [</span><span class="hl-3">path</span><span class="hl-0">.</span><span class="hl-7">resolve</span><span class="hl-0">(</span><span class="hl-3">__dirname</span><span class="hl-0">, </span><span class="hl-1">&#39;node_modules/tree-handle-lib&#39;</span><span class="hl-0">)],</span><br/><span class="hl-0">      </span><span class="hl-3">use:</span><span class="hl-0"> [</span><br/><span class="hl-0">        {</span><br/><span class="hl-0">          </span><span class="hl-3">loader:</span><span class="hl-0"> </span><span class="hl-3">path</span><span class="hl-0">.</span><span class="hl-7">resolve</span><span class="hl-0">(</span><span class="hl-3">__dirname</span><span class="hl-0">, </span><span class="hl-1">&#39;tree-handle-lib-loader&#39;</span><span class="hl-0">),</span><br/><span class="hl-0">          </span><span class="hl-3">options:</span><span class="hl-0"> {</span><br/><span class="hl-0">            </span><span class="hl-3">keyName:</span><span class="hl-0"> </span><span class="hl-1">&#39;id&#39;</span><br/><span class="hl-0">          }</span><br/><span class="hl-0">        }</span><br/><span class="hl-0">      ]</span><br/><span class="hl-0">    }]</span><br/><span class="hl-0">}</span><br/>
+</code><button>Copy</button></pre>
 <a id="md:developer-guide" class="tsd-anchor"></a><h2><a href="#md:developer-guide">Developer Guide</a></h2><ol>
 <li>create a module and file under src/lib directory.</li>
 <li>create a tree handle function and export it by default.</li>
@@ -119,6 +132,7 @@ update:
 <li><a href="#md:usage"><span>Usage</span></a></li>
 <li><a href="#md:developer-compatibility"><span>Developer <wbr/>Compatibility</span></a></li>
 <li><a href="#md:bugs"><span>BUGS</span></a></li>
+<li><a href="#md:faq"><span>FAQ</span></a></li>
 <li><a href="#md:developer-guide"><span>Developer <wbr/>Guide</span></a></li>
 <li><a href="#md:todo"><span>TODO</span></a></li></ul></li></ul></li></ul></div></details></div>
 <div class="site-menu">
